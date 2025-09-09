@@ -1,0 +1,84 @@
+{%extends 'studentparent.html'%}
+{%block body%}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h2 class="text-center text-light mt-2 ">Student Home</h2>
+    </div>
+</div>
+
+<div class="row p-3">
+    <div class="col-md-5 bg-light p-5 rounded-5">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="/media/{{stu.pic}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{stu.name}}</h5>
+                        <p class="card-text"><b>Number: </b> <span>{{stu.number}}</span></p>
+                        <p class="card-text"><b>Email: </b> <span>{{stu.email}}</span></p>
+                        <p class="card-text"><b>Gender: </b> <span>{{stu.gender}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                
+                <div class="col-md-8">
+                    <div class="card-body">
+                        
+                        <p class="card-text"><b>Father Name: </b> <span>{{stu.fname}}</span></p>
+                        <p class="card-text"><b>Mother Name: </b> <span>{{stu.mname}}</span></p>
+                        <p class="card-text"><b>Course: </b> <span>{{stu.course}}</span></p>
+                        <p class="card-text"><b>Branch: </b> <span>{{stu.branch}}</span></p>
+                        <p class="card-text"><b>Session: </b> <span>{{stu.session}}</span></p>
+                        <p class="card-text"><b>Address: </b> <span>{{stu.address}}</span></p>
+                        <p class="card-text"><b>Reg Date: </b> <span>{{stu.regdate}}</span></p>
+                        <div class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 bg-light p-5 rounded-5 mx-auto">
+        <div class="row my-5">
+            <div class="col-md-5 bg-dark text-light shadow-lg rounded-5 p-5 mx-auto d-flex justify-content-between">
+                <i class="fa fa-book fs-1 my-auto"></i>
+                <div class="my-auto">
+                    <h4>{{stl}}</h4>
+                    <h4>Study Material</h4>
+                </div>
+            </div>
+            <div class="col-md-5 bg-dark text-light shadow-lg rounded-5 p-5 mx-auto d-flex justify-content-between">
+                <i class="fa fa-newspaper fs-1 my-auto"></i>
+                <div class="my-auto">
+                    <h4>{{nl}}</h4>
+                    <h4>News</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-5 bg-dark text-light shadow-lg rounded-5 p-5 mx-auto d-flex justify-content-between">
+                <i class="fa fa-message fs-1 my-auto"></i>
+                <div class="my-auto">
+                    <h4>{{stl}}</h4>
+                    <h4>Feedbacks</h4>
+                </div>
+            </div>
+            <div class="col-md-5 bg-dark text-light shadow-lg rounded-5 p-5 mx-auto d-flex justify-content-between">
+                <i class="fa fa-book fs-1 my-auto"></i>
+                <div class="my-auto">
+                    <h4>{{nl}}</h4>
+                    <h4>Study Material</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{%endblock%}

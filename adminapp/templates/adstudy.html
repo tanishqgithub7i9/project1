@@ -1,0 +1,92 @@
+{%extends 'adminparent.html'%}
+{%block body%}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center text-light mt-2">Study Material</h1>
+
+    </div>
+</div>
+
+
+<div class="row ">
+    <div class="col-md-8 mx-auto">
+        <form action="" method="post" enctype="multipart/form-data" class="w-75 mx-auto p-5 rounded-5 bg-light text-dark shadow-lg">
+            {%csrf_token%}
+            <h5>
+                {%if st%}
+               Update 
+                {%else%}
+                Add 
+                
+                
+                {%endif%}
+                study material</h5>
+            <br>
+                        <label for="">Select Course: </label>
+            <select name="course" value="{{st.course}}" class="form-control border border-dark" id="">
+                {%if st.course%}
+                <option value="{{st.course}}">{{st.course}}</option>
+                {%else%}
+                <option value="">--Select Course--</option>
+                {%endif%}
+                {%for c in cr%}
+                {%if st.course != c.name%}
+                <option value="{{c.name}}">{{c.name}}</option>
+                {%endif%}
+                {%endfor%}
+            </select>
+       
+           <br><br>
+            <label for="">Select Branch: </label>
+            <select name="branch" value="{{st.branch}}" class="form-control border border-dark" id="">
+                {%if st.branch%}
+                <option value="{{st.branch}}">{{st.branch}}</option>
+                {%else%}
+                <option value="">--Select Branch--</option>
+                {%endif%}
+
+                {%for b in br%}
+                {%if st.branch != b.name %}
+
+                <option value="{{b.name}}">{{b.name}}</option>
+                {%endif%}
+                {%endfor%}
+            </select>
+       
+           <br><br>
+           <label for="">Select Session: </label>
+            <select name="session" value="{{st.session}}"class="form-control border border-dark" id="">
+                <option value="">--Select Session--</option>
+                {%if st.session%}
+                <option value="{{st.session}}">{{st.session}}</option>
+                {%endif%}
+                   {%for s in se%}
+                   {%if st.session != s.name%}
+                <option value="{{s.name}}">{{s.name}}</option>
+                {%endif%}
+                {%endfor%}
+            </select>
+       
+           <br><br>
+            <label for="">Enter Subject Name:</label>
+            <input type="text"value="{{st.subject}}" name="subject" class="form-control border border-dark" id="">
+             <br>
+              <label for="">Enter File Name:</label>
+            <input type="text"value="{{st.file_name}}" name="file_name" class="form-control border border-dark" id="">
+             <br>
+              <label for="">Upload File</label>
+            <input type="file" name="file" class="form-control border border-dark" id="">
+            {%if st.file%}
+            <small>If You Want to change file then only upload otherwise leave it</small>
+            {%endif%}
+             <br>
+             {%if st%}
+           <input type="submit"  value="update studdy material"class="btn btn-dark form-control">
+           {%else%}
+            <input type="submit"  value="add studdy material"class="btn btn-dark form-control">
+            {%endif%}
+        </form>
+    </div>
+</div>
+
+{%endblock%}

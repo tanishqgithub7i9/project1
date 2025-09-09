@@ -1,0 +1,52 @@
+
+.signin
+{
+    height: 89.5vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.447),rgba(0, 0, 0, 0.349)),  url('https://c1.wallpaperflare.com/preview/427/745/192/notebook-natural-laptop-macbook.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-90{
+    height: 90%!important;
+}
+.signin>form{
+    height: 350px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.419);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px white,2px 2px 5px inset white;
+}
+body {
+      margin: 0;
+      padding: 0;
+    }
+    .social-bar {
+      background-color: #0459d1; /* Blue background */
+      padding: 10px;
+      text-align: center;
+    }
+    .social-icon {
+      background-color: #fff;        /* White box */
+      color: green;                  /* Green icon */
+      font-size: 22px;
+      width: 45px;
+      height: 45px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;            /* Rounded square */
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.1);
+    }
+    .social-icon i {
+    color: green !important;
+}
+.nav{
+    width: 100%;
+}

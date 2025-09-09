@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group of Cards Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Splide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+
+  <style>
+    .card-title {
+      color: rgb(46, 150, 247);
+    }
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    .card {
+      border-radius: 10px;
+    }
+    .card-group-container {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .card-group-container .card {
+      flex: 1 1 calc(25% - 1rem); /* 4 cards per slide */
+      min-width: 220px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <section id="slider1" class="splide" aria-label="Group of Cards Carousel">
+    <div class="splide__track">
+      <ul class="splide__list">
+
+        <!-- Slide 1 -->
+        <li class="splide__slide">
+          <div class="card-group-container">
+            <div class="card text-center shadow">
+              <img src="/Content/images/clean.jpg" class="card-img-top" alt="Clean Environment">
+              <div class="card-body">
+                <h5 class="card-title">Clean Environment</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/infra.jpg" class="card-img-top" alt="Modern Infrastructure">
+              <div class="card-body">
+                <h5 class="card-title">Modern Infrastructure</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/hitech.jpeg" class="card-img-top" alt="Hi-Tech Laboratories">
+              <div class="card-body">
+                <h5 class="card-title">Hi-Tech Laboratories</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/skill.jpeg" class="card-img-top" alt="Skill Development">
+              <div class="card-body">
+                <h5 class="card-title">Skill Development</h5>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Slide 2 (Repeat or change content) -->
+        <li class="splide__slide">
+          <div class="card-group-container">
+            <div class="card text-center shadow">
+              <img src="/Content/images/clean.jpg" class="card-img-top" alt="Clean Environment">
+              <div class="card-body">
+                <h5 class="card-title">Clean Environment</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/infra.jpg" class="card-img-top" alt="Modern Infrastructure">
+              <div class="card-body">
+                <h5 class="card-title">Modern Infrastructure</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/hitech.jpeg" class="card-img-top" alt="Hi-Tech Laboratories">
+              <div class="card-body">
+                <h5 class="card-title">Hi-Tech Laboratories</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/skill.jpeg" class="card-img-top" alt="Skill Development">
+              <div class="card-body">
+                <h5 class="card-title">Skill Development</h5>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Slide 3 -->
+        <li class="splide__slide">
+          <div class="card-group-container">
+            <!-- same 4 cards or different -->
+            <div class="card text-center shadow">
+              <img src="/Content/images/clean.jpg" class="card-img-top" alt="Clean Environment">
+              <div class="card-body">
+                <h5 class="card-title">Clean Environment</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/infra.jpg" class="card-img-top" alt="Modern Infrastructure">
+              <div class="card-body">
+                <h5 class="card-title">Modern Infrastructure</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/hitech.jpeg" class="card-img-top" alt="Hi-Tech Laboratories">
+              <div class="card-body">
+                <h5 class="card-title">Hi-Tech Laboratories</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/skill.jpeg" class="card-img-top" alt="Skill Development">
+              <div class="card-body">
+                <h5 class="card-title">Skill Development</h5>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Slide 4 -->
+        <li class="splide__slide">
+          <div class="card-group-container">
+            <div class="card text-center shadow">
+              <img src="/Content/images/clean.jpg" class="card-img-top" alt="Clean Environment">
+              <div class="card-body">
+                <h5 class="card-title">Clean Environment</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/infra.jpg" class="card-img-top" alt="Modern Infrastructure">
+              <div class="card-body">
+                <h5 class="card-title">Modern Infrastructure</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/hitech.jpeg" class="card-img-top" alt="Hi-Tech Laboratories">
+              <div class="card-body">
+                <h5 class="card-title">Hi-Tech Laboratories</h5>
+              </div>
+            </div>
+            <div class="card text-center shadow">
+              <img src="/Content/images/skill.jpeg" class="card-img-top" alt="Skill Development">
+              <div class="card-body">
+                <h5 class="card-title">Skill Development</h5>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Splide JS -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+
+<script>
+  new Splide('#slider1', {
+    type: 'loop',
+    perPage: 1,
+    perMove: 1,
+    autoplay: true,
+    arrows: true,
+    pagination: true,
+  }).mount();
+</script>
+
+</body>
+</html>

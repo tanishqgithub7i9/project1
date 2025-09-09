@@ -1,0 +1,33 @@
+{%extends 'studentparent.html'%}
+{%block body%}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center text-light mt-2">View Feedback</h1>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8 mx-auto bg-light rounded-3">
+        <table class="table table-light text-dark">
+           <tr>
+            <th>S.no</th>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Feedback Type</th>
+            
+           </tr>
+{%for i in feed%}
+           <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.desc}}</td>
+             <td>{{i.feedtype}}</td>
+           
+            <td><a href="{%url 'studentapp:delfeed' i.id%}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+           </tr>
+{%endfor%}
+        </table>
+        
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,50 @@
+{%extends 'adminparent.html'%}
+{%block body%}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center text-light mt-2">Admin news</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <form action="" method="post" class="w-75 rounded-3 bg-light shadow-lg mx-auto p-5">
+            {%csrf_token%}
+            <h5>Add News</h5>
+            <br><br>
+           
+            <input type="text" placeholder="Enter Tiltle" name="title" id="" class="form-control border border-dark">
+            <br>
+            <textarea name="desc" placeholder="Enter Description" id="" class="form-control border border-dark"></textarea>
+            <br>
+            <input type="submit" value="Add News" class="btn btn-dark form-control">
+        </form>
+        
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8 mx-auto bg-light rounded-3">
+        <table class="table table-light text-dark">
+           <tr>
+            <th>S.no</th>
+            <th>Title</th>
+            <th>Desc</th>
+            <th colspan="2">Action</th>
+           </tr>
+{%for i in news%}
+           <tr>
+            <td>{{forloop.Counter}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.desc}}</td>
+            <td>Edit</td>
+            <td>Delete</td>
+           </tr>
+{%endfor%}
+        </table>
+        
+    </div>
+</div>
+
+
+{%endblock%}

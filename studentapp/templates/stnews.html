@@ -1,0 +1,30 @@
+{%extends 'studentparent.html'%}
+{%block body%}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center text-light mt-2"> View News</h1>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-md-8 mx-auto bg-light rounded-3">
+        <table class="table table-light text-dark">
+           <tr>
+            <th>S.no</th>
+            <th>Title</th>
+            <th>Desc</th>
+          
+           </tr>
+{%for i in news%}
+           <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.desc}}</td>
+           
+           </tr>
+{%endfor%}
+        </table>
+        
+    </div>
+</div>
+
+{%endblock%}
